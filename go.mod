@@ -1,4 +1,4 @@
-module github.com/zeromicro/go-zero/tools/goctl
+module github.com/gowins/goctl
 
 go 1.16
 
@@ -15,6 +15,7 @@ require (
 	github.com/zeromicro/antlr v0.0.1
 	github.com/zeromicro/ddl-parser v1.0.4
 	github.com/zeromicro/go-zero v1.3.4
+	github.com/zeromicro/go-zero/tools/goctl v1.4.0
 	google.golang.org/grpc v1.46.2
 	google.golang.org/protobuf v1.28.0
 )
