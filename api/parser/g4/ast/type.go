@@ -316,7 +316,7 @@ func (v *ApiVisitor) VisitDataType(ctx *api.DataTypeContext) interface{} {
 	if ctx.GetTime() != nil {
 		// todo: reopen if it is necessary
 		timeExpr := v.newExprWithToken(ctx.GetTime())
-		v.log.Warning(fmt.Sprintf("%s line %d:%d  %s", v.prefix, timeExpr.Line(), timeExpr.Column(), "unsupported time.Time"))
+		v.log.Info(fmt.Sprintf("%s line %d:%d  %s", v.prefix, timeExpr.Line(), timeExpr.Column(), "unsupported time.Time"))
 		return &Time{Literal: timeExpr}
 	}
 	if ctx.PointerType() != nil {
