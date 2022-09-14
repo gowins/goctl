@@ -313,12 +313,12 @@ func (v *ApiVisitor) VisitDataType(ctx *api.DataTypeContext) interface{} {
 	if ctx.GetInter() != nil {
 		return &Interface{Literal: v.newExprWithToken(ctx.GetInter())}
 	}
-	if ctx.GetTime() != nil {
-		// todo: reopen if it is necessary
-		timeExpr := v.newExprWithToken(ctx.GetTime())
-		v.log.Info(fmt.Sprintf("%s line %d:%d  %s", v.prefix, timeExpr.Line(), timeExpr.Column(), "unsupported time.Time"))
-		return &Time{Literal: timeExpr}
-	}
+	//if ctx.GetTime() != nil {
+	//	// todo: reopen if it is necessary
+	//	timeExpr := v.newExprWithToken(ctx.GetTime())
+	//	v.log.Info(fmt.Sprintf("%s line %d:%d  %s", v.prefix, timeExpr.Line(), timeExpr.Column(), "unsupported time.Time"))
+	//	return &Time{Literal: timeExpr}
+	//}
 	if ctx.PointerType() != nil {
 		return ctx.PointerType().Accept(v)
 	}
